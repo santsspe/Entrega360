@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 40% 97%;
+    --foreground: 224 42% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 42% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 42% 9%;
+
+    --primary: 225 100% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224 25% 93%;
+    --secondary-foreground: 224 42% 9%;
+
+    --muted: 224 25% 94%;
+    --muted-foreground: 224 14% 46%;
+
+    --accent: 224 30% 93%;
+    --accent-foreground: 224 42% 9%;
+
+    --destructive: 0 74% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 224 24% 89%;
+    --input: 224 24% 89%;
+    --ring: 225 100% 57%;
+
+    --radius: 0.7rem;
+
+    /* semantic status colors */
+    --success: 153 64% 33%;
+    --success-soft: 152 66% 94%;
+    --info: 225 100% 57%;
+    --info-soft: 224 100% 95%;
+    --warning: 36 92% 44%;
+    --warning-soft: 40 95% 94%;
+    --danger: 0 74% 51%;
+    --danger-soft: 0 100% 96%;
+    --neutral: 224 14% 46%;
+    --neutral-soft: 224 24% 93%;
+
+    /* sidebar (dark navy) */
+    --sidebar-background: 224 46% 8%;
+    --sidebar-foreground: 224 20% 74%;
+    --sidebar-primary: 225 100% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 223 32% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 223 30% 14%;
+    --sidebar-ring: 225 100% 57%;
+  }
+
+  .dark {
+    --background: 224 46% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 42% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 42% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 225 100% 62%;
+    --primary-foreground: 224 42% 9%;
+
+    --secondary: 223 30% 16%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 223 30% 16%;
+    --muted-foreground: 224 14% 65%;
+
+    --accent: 223 30% 16%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 223 30% 16%;
+    --input: 223 30% 16%;
+    --ring: 225 100% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* subtle dot grid backdrop for the content area */
+.dot-grid {
+  background-image: radial-gradient(hsl(224 24% 89% / 0.65) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
